@@ -1,0 +1,898 @@
+/*Generales*/
+.h1-strong{
+	font-size: 35px;
+	font-weight: lighter;
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+body{
+	background: url(img/img.png);
+	background-attachment: fixed;
+	z-index: -1;
+}
+
+.page-header{
+	padding-top: 24px !important;
+	border-bottom:none !important;
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+	text-align: center;
+}
+
+.title{
+	padding-top: 24px !important;
+	border-bottom:none !important;
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+	width: 80% !important;
+}
+
+.title h3{
+	font-size: 36px;
+	font-weight: lighter;
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+}
+
+.loading{
+	width: 100px;
+	height: 100px;
+	margin-left: 45% !important;
+}
+.loading img{
+	width: 100%;
+}
+
+/*Shadows*/
+
+#followed .pan,
+#following .pan,
+#homeUno .pan,
+#homeDos .pan,
+#homeTres .pan,
+#log .pan,
+#map-container1 .pan,
+#map-container2 .pan,
+#profile .pan,
+#publications .pan,
+#register .pan,
+#sidebar .pan,
+#timeline .pan,
+#user-edit .pan,
+#people .pan,
+#add .pan,
+#main .pan,
+#received .pan,
+#sended .pan{
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+/*Author: Hernan Mitchel Camacho Valdez*/
+/*Login*/
+#login{
+	margin: 15px !important;
+}
+
+#login .btn{
+	margin: 15px !important;
+}
+
+/*Header*/
+
+.navigation{
+	margin: 0;
+	padding: 0 !important;
+}
+
+.navigation .navbar{
+	border-radius: 0 !important;
+	background: #fff !important;
+	border-bottom: none;
+	position:fixed;
+	top:0;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+
+
+}
+
+.navigation .navbar *{
+	color: #fd5c63 !important;
+}
+
+/*.navigation .navbar .nav{
+	width: 90%;
+}
+*/
+/*.navigation .navbar .liPad{
+	padding-left: 800px;
+}
+*/
+.active{
+	border-bottom: 2px solid #fd5c63;
+}
+
+.mens{
+	margin: 10px !important; 
+	font-size: 16px;
+	/*text-align: center;*/
+}
+
+.mens.active{
+	border-bottom: none;
+}
+
+.active:focus{
+	outline:0px;
+	box-shadow: none;
+
+}
+
+.navigation .navbar a:hover{
+	background:  rgba(253,92,99,0.1) !important;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.navigation .avatar{
+	width: 35px;
+	height: 35px;
+	border-radius: 100px;
+	overflow: hidden;
+	margin-top: 9px;
+	margin-right: 2px;
+}
+
+.navigation .avatar img{
+	width: 100%;
+	/*display: block;
+	margin: auto;*/
+}
+
+/*.glyphicon.glyphicon-log-in{
+	margin: 6px;
+}
+*/
+/*Body*/
+
+.btn{
+	margin: 5px;
+}
+
+/*Gente*/
+
+.people{
+	min-height: 500px;
+}
+
+.item-user .image-user,
+.item-publication .image-user{
+	width: 75px;
+	height: 75px;
+	border-radius: 100px;
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.item-user .image-user img,
+.item-publication .image-user img{
+	width: 100%;
+}
+
+.item-user .user-name,
+.item-publication .user-name{
+	margin-top: 10px;
+}
+
+.item-user .user-name .nickname{
+	color: #969393;
+}
+
+.item-user .user-name .name-suname a{
+	color: #3b5998;
+	font-weight: bold;
+}
+
+/*Sidebar*/
+
+.sidebar-32{
+	width: 32% !important;
+	padding: 0 !important;
+
+}
+
+#user-card{
+	padding: 25px;
+	width: 32%;
+}
+
+ #new-publication{
+	padding: 18px;
+	width: 32%;
+	padding-left: 5px;
+ }
+
+#user-card .avatar{
+	width: 75px;
+	height: 75px;
+	border-radius: 100px;
+	overflow: hidden;
+	margin-right: 15px;
+}
+
+#user-card .avatar img{
+	width: 100%;
+}
+
+#user-card .name-suname{
+	font-weight: 300;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+#user-card .name-suname a{
+	color: #3b5998;
+}
+
+#user-card .name-suname .nickname{
+	color: #969393;
+}
+
+#user-card .stats{
+	border-top: 2px solid #969393;
+	margin-top: 10px;
+}
+
+#user-card .stats a:hover{
+	text-decoration: none;
+}
+
+#user-card .stats a:hover .number-stats{
+	color: #213121;
+}
+
+#user-card .number-stats{
+	color: #969393;
+}
+
+#user-card .label-stats,
+#user-card .number-stats{
+	display: block;
+	text-align: center;
+	transition: all 300ms;
+
+}
+
+#user-card .following-data{
+	float: left;
+	padding-left: 14px;
+	padding-right: 14px;
+	margin-top: 10px;
+	border-right: 2px solid #969393;
+}
+
+#user-card .label-stats{
+	font-weight: bold;
+	color: #3b5998;
+}
+
+#user-card .following-data:first-child{
+	padding-right: 32px;
+}
+
+
+#user-card .following-data:last-child{
+	border: none;
+}
+
+/*Timeline*/
+
+#publications{
+	min-height: 150px;
+}
+
+#publications .pnl{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#publications .date{
+	color: gray;
+}
+
+/*Perfil*/
+
+#data-profile{
+	min-height: 200px;
+	text-align: left;
+}
+
+#data-profile .avatar{
+	width: 185px;
+	height: 185px;
+	border-radius: 400px;
+	overflow: hidden;
+	margin-right: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+/*Author: Hernan Mitchel Camacho Valdez*/
+#data-profile .avatar img{
+	width: 100%;
+}
+
+#data-profile .user-name .name{
+	font-size: 22px;
+	font-weight: 300;
+	color: #3b5998;
+}
+
+#data-profile .user-name{
+	margin-top: 40px;
+	padding-right: 30px;
+	border-right: 4px solid #969393;
+}
+
+#data-profile .user-name .label{
+	margin-bottom: 15px;
+}
+
+#data-profile .user-name .nickname{
+	font-size: 14px;
+	font-weight: 200;
+	color: gray;
+}
+
+#data-profile .stats{
+	margin-left: 115px;
+	padding-left: 20px;
+	margin-top: 50px;
+	margin-bottom: 15px;
+	
+}
+
+#data-profile .stats a{
+	font-size: 20px;
+	line-height: 35px;
+}
+
+#stats .number-stats{
+	font-size: 18px;
+	color: #969393;
+}
+
+#nullPub{
+	font-size: 25px;
+	text-align: center;
+	margin-top: 110px;
+}
+
+#nullMess{
+	min-height: 300px;
+}
+
+#nullMess .nullMessage{
+	font-size: 25px;
+	text-align: center;
+	margin-top: 120px;
+}
+
+
+#nullFollows,
+#nullFolloweds{
+	font-size: 25px;
+	text-align: center;
+	margin-top: 120px;
+}
+
+#noFollows,
+#noFollowed{
+	min-height: 300px;
+}
+
+/*Mensajes*/
+
+#formAdd{
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+	margin-right: 20px !important;
+	margin-left: 20px !important;
+}
+
+#textarea, #textarea2{
+	width: 100%;
+	height: 100px;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100px;
+	max-height: 200px; 
+}
+
+#textarea:focus{
+	border: 2px solid #3895ea;
+	border-radius: 2px;
+}
+
+#textarea2:focus{
+	border: 2px solid #3895ea;
+	border-radius: 2px;
+}
+
+/*Mapas*/
+
+#maps{
+	min-height: 500px;
+}
+
+#map-rutas{
+	margin: 10px;
+}
+
+#map-rutas .truck{
+	box-shadow: none;
+	border: none;
+}
+
+#map-places{
+	margin: 10px;
+}
+
+#map-places .iframe{
+	box-shadow: none;
+	border: none;
+}
+
+#navResp li{
+	margin-left: 10px;
+}
+
+#dataDropdown{
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+#dataDropdown .img{
+    vertical-align: middle;
+
+}
+/*User edit*/
+
+#formEdit .paEdit{
+	margin: 10px !important;
+}
+
+/*Home*/
+
+#slider{
+	padding:0 !important;
+	margin: 0 !important;
+	min-height: 670px;
+	max-height: 670px;
+	outline:0px;
+	box-shadow: none;
+	border: none;
+	
+}
+
+#slider .active{
+	border-bottom: none !important; 
+}
+
+#slider .sliderHome{
+	box-shadow: none;
+	border: none;	
+	min-height: 580px !important;
+	max-height: 580px !important;
+}
+
+#slider .sliderHome img{
+	min-height: 800px !important;
+	max-height: 800px !important;
+}
+
+#homeUno .center{
+	width: 80% !important;
+	margin-right: 0 !important; 
+	margin-left: auto !important;
+	vertical-align: middle;
+	font-size: 12px;
+	font-family: 'Montserrat',sans-serif, Arial !important;
+}
+
+#homeUno .center a{
+	text-decoration: none;
+	color: #fd5c63;
+}
+
+#homeUno .center img{
+	border-radius: 7px 0px 0px 7px;
+}
+
+#homeUno .separator{
+	margin-top: 50px !important;
+}
+
+#homeUno .center2{
+	width: 80% !important;
+	margin-right: 0 !important; 
+	margin-left: 23% !important;
+	vertical-align: middle;
+	font-size: 12px;
+	font-family: 'Montserrat',sans-serif, Arial !important;
+}
+
+#homeUno .center2 a{
+	text-decoration: none;
+	color: #fd5c63;
+}
+
+#homeUno .center2 img{
+	border-radius: 7px 0px 0px 7px;
+}
+
+#homeUno .centrar{
+	margin-left: 12% !important;
+}
+
+
+#homeUno .pan{
+	margin-left: 15px !important;
+	padding: 0 !important;
+	border-radius: 7px 7px 7px 7px !important;
+}
+
+
+#homeUno .descubre{
+	background:#fff;	
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+	margin-top: 250px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 100%;
+	overflow: hidden;
+}
+
+#homeUno .descubre .pan:first-child{
+	margin-left: 30px !important;
+}
+
+#homeUno .descubre .pan{
+	background: rgba(0,0,0, 0.84);
+	border: none !important;
+	padding-right: 20px !important;
+	padding-left: 20px !important;
+	border-radius: 100px !important;
+	overflow: hidden;
+	text-align: center;
+}
+
+#homeUno .descubre .pan p{
+	color: white; 
+	font-size: 15px;
+}
+
+#homeUno .descubre .pan img{
+	width: 60% !important;
+	padding-top: 15px !important; 
+}
+
+#history .pan{
+	margin-left: 27% !important;
+	padding: 0 !important;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+#gastronomy .pan{
+	margin-left: 27% !important;
+	padding: 0 !important;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+#gastronomy .text{
+	border-left: 2px solid gray;
+	padding: 20px !important;
+	margin-bottom: 15px !important;
+}
+
+/*Estados*/
+
+#armeria .text,
+#colima .text,
+#comala .text,
+#cuauh .text,
+#ixtla .text,
+#manzanillo .text,
+#minatitlan .text,
+#tecoman .text,
+#villa .text,
+#coqui .text{
+	border-left: 2px solid gray;
+	padding: 20px !important;
+	margin-bottom: 15px !important;
+}
+
+#armeria .text2,
+#colima .text2,
+#coqui .text2,
+#cuauh .text2,
+#ixtla .text2,
+#manzanillo .text2,
+#minatitlan .text2,
+#tecoman .text2,
+#villa .text2,
+#comala .text2{
+	border-right: 2px solid gray;
+	padding: 20px !important;
+	margin-bottom: 15px !important;
+}
+
+#armeria .bold,
+#colima .bold,
+#coqui .bold,
+#cuauh .bold,
+#ixtla .bold,
+#manzanillo .bold,
+#minatitlan .bold,
+#tecoman .bold,
+#villa .bold,
+#comala .bold{
+	color:#3895ea;
+	font-size: 12px;
+}
+
+#armeria .bold2,
+#colima .bold2,
+#coqui .bold2,
+#cuauh .bold2,
+#ixtla .bold2,
+#manzanillo .bold2,
+#minatitlan .bold2,
+#tecoman .bold2,
+#villa .bold2,
+#comala .bold2{
+	color:black;
+	font-size: 14px;
+}
+
+
+
+
+/*seccion de colima*/
+
+#colima .pan{
+	margin-left: 27% !important;
+	padding: 0 !important;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+#colima .text{
+	border-left: 2px solid gray;
+	padding: 20px !important;
+	margin-bottom: 15px !important;
+}
+
+
+
+/*Arqueologia*/
+
+#archeology a{
+	text-decoration: none;
+}
+
+#archeology .active{
+	border-bottom: none !important;
+}
+
+#archeology .panel{
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	border-radius: 7px 7px 0px 0px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+#archeology img{
+	border-radius: 7px 7px 0px 0px;
+}
+
+/*Adventure*/
+
+#adventure a{
+	text-decoration: none;
+}
+
+#adventure .active{
+	border-bottom: none !important;
+}
+
+#adventure .panel{
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	border-radius: 7px 7px 0px 0px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+#adventure img{
+	border-radius: 7px 7px 0px 0px;
+}
+
+/*Author: Hernan Mitchel Camacho Valdez*/
+
+
+/*Register*/
+
+#formReg{
+	padding: 20px !important;
+}
+
+/*Footer*/
+
+footer .derechos{
+	text-align: center;
+	margin-top: 30px; 
+	margin-bottom: 10px;
+}
+
+footer .derechos p{
+	font-size: 15px;
+	color: #fff;
+}
+
+footer .derechos .small{
+	font-size: 13px;
+	color: #fff;
+}
+
+
+/*Mediaquery para #homeUno*/
+
+@media screen and (max-width: 800px){
+	#user-card{
+		width: 95% !important;		
+	}
+
+	#sidebar{
+		padding-left: 15px !important;
+
+	}
+
+	#timeline{
+		padding-left: 40px !important;
+		padding-bottom: 30px !important;
+	}
+	#new-publication{
+		width: 95% !important;
+	}
+	
+	#sidebar .stats{
+		font-size: 12px;
+	}
+
+	#user-card .following-data{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		margin-top: 5px !important;
+	}
+
+	.h1-strong{
+		font-size: 25px !important;
+	}
+
+	#sidebar-title{
+		width: 95% !important;
+	}
+
+	#homeUno .center{
+		margin-right: 10% !important; 		
+	}
+
+	#myCarousel{
+		margin-top: 50px !important;
+	}
+
+	#slider{
+		max-height: 160px !important;
+		min-height: 160px !important;
+	}
+
+	.title{
+		margin-left: 30px !important; 
+	}
+}
+
+@media screen and (max-width: 500px){
+	#user-card{
+		width: 95% !important;		
+	}
+
+	#sidebar{
+		padding-left: 15px !important;
+
+	}
+
+	#timeline{
+		padding-left: 40px !important;
+		padding-bottom: 30px !important;
+	}
+	#new-publication{
+		width: 95% !important;
+	}
+	
+	#sidebar .stats{
+		font-size: 12px;
+	}
+
+	#user-card .following-data{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		margin-top: 5px !important;
+	}
+
+	.h1-strong{
+		font-size: 25px !important;
+	}
+
+	#sidebar-title{
+		width: 95% !important;
+	}
+
+	#homeUno .center{
+		margin-right: 10% !important; 		
+	}
+
+	#myCarousel{
+		margin-top: 50px !important;
+	}
+
+	#slider{
+		max-height: 160px !important;
+		min-height: 160px !important;
+	}
+
+	.title{
+		margin-left: 30px !important; 
+	}
+
+	#homeUno .descubre .pan:first-child{
+		margin-left: 10px !important;
+	}
+
+	#homeUno .descubre .pan{
+		padding-right: 10px !important;
+		padding-left: 10px !important;
+	}
+
+	#history .pan{
+		margin-left: 0% !important;
+	}
+
+	#historyCarousel{
+		margin-top: 50px !important;
+	}
+
+	#gastronomy .pan{
+		margin-left: 0% !important;
+	}
+
+	#gastronomyCarousel{
+		margin-top: 50px !important;
+	}
+
+	#homeUno .center2{
+		margin-left: 10% !important;
+	}
+
+	#homeUno .centrar{
+		margin-left: 0% !important;
+	}
+
+	
+		
+}

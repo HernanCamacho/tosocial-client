@@ -1,0 +1,100 @@
+<div id="homeUno">
+
+	<div id="slider">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+		    <!-- Wrapper for slides  -->
+		    <div class="carousel-inner">
+
+		    	<div class="item active">
+		        	<img src="../../../assets/img/1.png" alt="" style="width:100%;">
+      			</div>
+
+      			<div class="item">
+        			<img src="../../../assets/img/5.png" alt="" style="width:100%;">
+     			</div>
+    
+		    	<div class="item">
+		        	<img src="../../../assets/img/3.png" alt="" style="width:100%;">
+		      	</div>
+  
+    		</div>
+
+    		<!-- Left and right controls -->
+    		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      			<span class="glyphicon glyphicon-chevron-left"></span>
+      			<span class="sr-only">Anterior</span>
+    		</a>
+    		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+      			<span class="glyphicon glyphicon-chevron-right"></span>
+      			<span class="sr-only">Siguiente</span>
+    		</a>
+  		</div>
+	</div>
+
+	<div class="center">
+		<div class="title">
+			<h3>¿Qué hacer?</h3>	
+		</div>	
+		<a [routerLink]="['/arqueologia']" [routerLinkActive]="['active']" >
+			<div class="panel panel-default pan col-lg-3">
+				<img src="../../../assets/img/chanal.png" width="150" alt="">&nbsp;&nbsp;Arqueología
+			</div>             
+        </a>
+        <a [routerLink]="['/aventura']" [routerLinkActive]="['active']" >
+			<div class="panel panel-default pan col-lg-3">
+				<img src="../../../assets/img/aventura.png" width="150" alt="">&nbsp;&nbsp;&nbsp;&nbsp;Aventura
+			</div>             
+        </a>
+        <a [routerLink]="['/cultura']" [routerLinkActive]="['active']" >
+			<div class="panel panel-default pan col-lg-3">
+				<img src="../../../assets/img/cultura.png" width="150" alt="">&nbsp;&nbsp;&nbsp;&nbsp;Cultura
+			</div>             
+        </a>
+        <a [routerLink]="['/playas']" [routerLinkActive]="['active']" >
+			<div class="panel panel-default pan col-lg-3">
+				<img src="../../../assets/img/2.png" width="150" alt="">&nbsp;&nbsp;&nbsp;Sol y Playa
+			</div>             
+        </a>
+        <a [routerLink]="['/ecoturismo']" [routerLinkActive]="['active']" >
+			<div class="panel panel-default pan col-lg-3">
+				<img src="../../../assets/img/ecoturismo.png" width="150" alt="">&nbsp;&nbsp;&nbsp;Ecoturismo
+			</div>             
+        </a>
+        <a [routerLink]="['/golf']" [routerLinkActive]="['active']" >
+			<div class="panel panel-default pan col-lg-3">
+				<img src="../../../assets/img/golf.png" width="150" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Golf
+			</div>             
+        </a>
+	</div>
+	<section class="descubre">
+		<div class="center">
+			<div class="title">
+				<h3>Descubre Colima</h3>	
+			</div>	
+			<a [routerLink]="['/historia']" [routerLinkActive]="['active']" >
+				<div class="panel panel-default pan col-lg-2">
+					<img src="../../../assets/img/icons/iglesia.png" alt=""><p>Historia</p>
+				</div>             
+        	</a>
+        	<a [routerLink]="['/gastronomia']" [routerLinkActive]="['active']" >
+				<div class="panel panel-default pan col-lg-2">
+					<img src="../../../assets/img/icons/eat.png" alt=""><p>Gatronomia</p>
+				</div>             
+        	</a>
+        	<a target="_blank" href="https://www.meteored.mx/clima_Colima-America+Norte-Mexico-Colima--1-90844.html" [routerLinkActive]="['active']" >
+				<div class="panel panel-default pan col-lg-2">
+					<img src="../../../assets/img/icons/sol.png" alt=""><p>Clima</p>
+				</div>             
+        	</a>
+        	<a [routerLink]="['/colima']" [routerLinkActive]="['active']" >
+				<div class="panel panel-default pan col-lg-2">
+					<img src="../../../assets/img/icons/lentes.png" alt=""><p>Colima</p>
+				</div>             
+        	</a>
+		</div>
+	</section>
+	
+</div>
+
+

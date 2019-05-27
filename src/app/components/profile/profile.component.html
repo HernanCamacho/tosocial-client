@@ -1,0 +1,95 @@
+<div class="col-lg-8" id="profile">
+	<div class="page-header">  	
+		<h1 class="h1-strong">{{title}}</h1>
+	</div>
+	<div class="loading" *ngIf="loading">
+		<img src="../../../assets/img/loader.gif" alt="">
+	</div>
+	<div id="data-profile" class="col-lg-12 panel panel-default pan" *ngIf="user">
+		<div class="avatar pull-left">
+			<img src="{{url + 'get-image-user/' + user.image}}" *ngIf="user.image"/>
+			<img src="../assets/user.png" *ngIf="!user.image"/>
+		</div>
+
+		<div class="user-name pull-left">
+			<div class="label label-default pull-left" *ngIf="followed">
+				Te sigue
+			</div> 
+
+			<div class="label label-default pull-left" *ngIf="!followed">
+				<span *ngIf="identity._id != user._id" >
+					No te sigue
+				</span>
+			</div>
+			<div class="clearfix"></div>
+			<div class="pull-left">
+				
+				<p class="name">
+					{{user.name + ' ' + user.suname}}
+				</p>
+				<p class="nickname">
+					{{user.nickname}}
+				</p>
+
+			</div>
+			<div class="clearfix"></div>
+			<div class="follow pull-left">
+				
+				<button class="btn btn-success" (click)="followUser(user._id)" *ngIf="!following && (identity._id != user._id)">
+					Seguir
+				</button>
+				<button class="btn btn-primary" (click)="unfollowUser(user._id)" *ngIf="following" (mouseenter)="mouseEnter(user._id)" (mouseleave)="mouseLeave()" [class.btn-danger]="user._id == followUserOver" >
+					<span *ngIf="user._id == followUserOver; else following">
+						Dejar de seguir
+					</span>
+					<ng-template #following>
+						Siguiendo 
+					</ng-template>
+				</button>
+
+			</div>
+		</div>
+
+		<!-- counters -->
+		<div id="stats" class="stats pull-left" *ngIf="stats">
+			<div class="following-data">
+				<a [routerLink]="['/siguiendo', user._id, 1]">
+					<span class="label-stats">
+						Siguiendo
+					</span>
+					<span class="number-stats">
+						{{	stats.following }}
+					</span>
+				</a>
+			</div>
+
+			<div class="following-data">
+				<a [routerLink]="['/seguidores', user._id, 1]">
+					<span class="label-stats">
+						Seguidores
+					</span>
+					<span class="number-stats">
+						{{	stats.followed }}
+					</span>
+				</a>
+			</div>
+
+			<div class="following-data">
+				<a href="#">
+					<span class="label-stats">
+						Publicaciones
+					</span>
+					<span class="number-stats">
+						{{	stats.publications }}
+					</span>
+				</a>
+			</div>
+		</div> <!-- cerramos counters -->
+	</div>
+	
+	<div class="col-lg-12 panel panel-default pan" *ngIf="user">
+		<publications [user]="user._id"></publications>
+	</div>
+
+</div>
+<sidebar></sidebar>

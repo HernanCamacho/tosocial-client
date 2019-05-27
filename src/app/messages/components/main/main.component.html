@@ -1,0 +1,39 @@
+<div class="col-lg-4 " id="main">
+	<div class="page-header">  	
+		<h3 class="h1-strong">{{title}}</h3>
+	</div>
+	<div class="sidebar-admin panel panel-default pan">
+		<ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
+			<li role="presentation" [routerLinkActive]="['active']" class="mens">
+				<a class="" [routerLink]="['enviar']">
+					Enviar mensaje
+					<span class="glyphicon glyphicon-edit pull-right"></span>
+				</a>
+			</li>
+			<li role="presentation" [routerLinkActive]="['active']" class="mens">
+				<a [routerLink]="['recibidos']">
+					Mensajes recibidos
+
+					<span class="glyphicon glyphicon-download-alt pull-right"></span>
+				</a>
+			</li>
+			<li role="presentation" [routerLinkActive]="['active']" class="mens">
+				<a [routerLink]="['enviados']">
+					Mensajes enviados
+					<span class="glyphicon glyphicon-send pull-right"></span>
+				</a>
+			</li>
+			<li role="presentation" [routerLinkActive]="['active']" class="mens">
+				<a [routerLink]="['/home']">
+					Información
+					<span class="glyphicon glyphicon-info-sign pull-right"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="col-lg-8">
+	<!-- componentes/router-outler -->
+	<router-outlet></router-outlet>
+</div>

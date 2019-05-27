@@ -1,0 +1,19 @@
+<div class="col-lg-10"  id="map-container1" style="position :relative !important; 
+    left: 10% !important; min-height: 700px;">
+	<!-- *ngIf="!identity" -->
+	<div class="page-header">
+		<h1 class="h1-strong" >{{title}}</h1>
+	</div>
+	
+	<div class="alert alert-success" *ngIf="status == 'success'">
+		Registro completado correctamente, <a [routerLink]="['/login']"> ingresa aquí</a>
+	</div>
+	<div class="alert alert-danger" *ngIf="status == 'Error we'">
+		El registro no se ha podido completar, quizás ese nickname o email ya estén en uso, inténtalo de nuevo con otros datos.
+	</div>
+	<div id="maps"class="panel panel-default pan">
+		<div id="map-places">
+			<iframe class="iframe" width="100%" height="500" src="http://192.168.1.124/Negocios/view.php"></iframe>
+		</div>
+	</div>
+</div>

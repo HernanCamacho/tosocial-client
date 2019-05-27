@@ -1,0 +1,139 @@
+<div class="navigation col-lg-12">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">{{title}}</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav" *ngIf="!identity">
+          <li>
+            <a [routerLink]="['/home']" [routerLinkActive]="['active']" >
+              <span class="glyphicon glyphicon-home"></span>
+              &nbsp;&nbsp;Inicio
+            </a>
+          </li>
+           <li> 
+              <a [routerLink]="['/login']" [routerLinkActive]="['active']" >
+                <span class="glyphicon glyphicon-log-in"></span>
+                &nbsp;&nbsp;&nbsp;Iniciar sesión
+              </a>
+            </li>
+        </ul>
+          <ul class="nav navbar-nav" id="navResp">
+            <ul class="nav navbar-nav" *ngIf="identity">
+              <li>
+                <a [routerLink]="['/home']" [routerLinkActive]="['active']" >
+                  <span class="glyphicon glyphicon-home"></span>
+                  &nbsp;&nbsp;Inicio
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/timeline']" [routerLinkActive]="['active']">
+                  <span class="glyphicon glyphicon-globe"></span>
+                  &nbsp;&nbsp;Timeline
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/gente']" [routerLinkActive]="['active']" >
+                  <span class="glyphicon glyphicon-user"></span>
+                  &nbsp;&nbsp;Gente
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/mensajes']" [routerLinkActive]="['active']" >
+                  <span class="glyphicon glyphicon-envelope"></span>
+                  &nbsp;&nbsp;Mensajes
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/mapas']" [routerLinkActive]="['active']" >
+                  <span class="glyphicon glyphicon-road"></span>
+                  &nbsp;&nbsp;Mapas
+                  </a>
+              </li>
+              <li>
+                <a [routerLink]="['/negocios']" [routerLinkActive]="['active']" >
+                  <span class="glyphicon glyphicon-credit-card"></span>
+                  &nbsp;&nbsp;Negocios
+                  </a>
+              </li>
+            </ul>
+          </ul> <!--navResp-->
+
+          <ul class="nav navbar-nav navbar-right" *ngIf="identity" id="dataDropdown">
+            <li class="avatar pull-left img">
+              <!-- imagen de perfil -->
+              <img src="{{url + 'get-image-user/' + identity.image}}" *ngIf="identity && identity.image" alt="">
+              <img src="../assets/user.png" alt="" *ngIf="!identity.image"/>
+            </li>
+              
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{identity.name}} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a [routerLink]="['/perfil', identity._id]">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Mi perfil
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="['/mis-datos']">
+                    <span class="glyphicon glyphicon-cog"></span>
+                    Mis datos
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pointer" (click)="logout()">
+                    <span class="glyphicon glyphicon-log-out"></span>
+                    Cerrar sesión
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+
+<footer>
+    <section class="contacto">
+      <div class="contenedor">
+        </div>
+    </section>
+    <section class="redes-sociales">
+      <div class="contenedor">
+        <a target="_blank" class="facebook" href="https://www.facebook.com/VisitColimaMx/?ref=br_rs"><i class="fa fa-facebook"></i></a>
+        <a target="_blank" class="twitter" href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" class="youtube" href="https://www.youtube.com/channel/UCxc43vayiMeHmu4L6hnywYw"><i class="fa fa-youtube-play"></i></a>
+        <a target="_blank" class="instagram" href="https://www.instagram.com/visitcolimamx/?hl=es-la"><i class="fa fa-instagram"></i></a>
+      </div>
+      <div class="derechos">
+        <p>
+          © Derechos reservados ToSocial 2018. SmartSolutions Technologies. 
+          <br>Powered by:
+        </p>
+        <img src="../assets/img/js.png" alt="" width="70" title="NodeJS & Express">
+        <img src="../assets/img/angular.png" alt="" width="35" title="AngularJS">&nbsp;&nbsp;
+        <img src="../assets/img/mongodb.png" alt="" width="45" title="MongoDB">
+        <br>
+        <p>
+          Política de Privacidad  & Términos de uso.
+        </p>
+        <p class="small">
+          Material fotográfico, información, audio y video por: JC Villa Fotografía Profesional & VisitColima.
+        </p>
+      </div>
+    </section>
+</footer>
